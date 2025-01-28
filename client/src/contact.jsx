@@ -5,38 +5,35 @@
  * Date: Jan 28, 2025
  */
 import {Link} from 'react-router-dom';
-import React from 'react';
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom/client';
+import { useNavigate } from "react-router-dom";
+import CustomInput from '../components/CustomInput';
 
 export default function Contact(){
+    const [name, setName] = useState("");
+    const navigate = useNavigate();
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        navigate("/");
+    }
+
     return (
         <>
             <h1>Contact</h1>
-            <p>Contact me via email: gcayaby2@my.centennialcollege.ca</p>
-            <form>
-                <label>
-                    First name: <input placeholder="First name"/>
-                </label>
-                <br/>
-                <label>
-                    Last name: <input placeholder="Last name"/>
-                </label>
-                <br/>
-                <label>
-                    Contact number: <input placeholder="Contact number"/>
-                </label>
-                <br/>
-                <label>
-                    Email: <input placeholder="Email"/>
-                </label>
-                <br/>
-                <label>
-                    Address: <input placeholder="Address "/>
-                </label>
-                <br/>
-                <Link to="/">
-                <button>Submit form</button>
-                </Link>
-            </form>
+            <div>
+                <p>Contact me via email: gcayaby2@my.centennialcollege.ca</p>
+                <form onSubmit={handleSubmit}>
+                    <CustomInput label="First Name" type={'text'} name={"firstName"} placeholder={"First Name"}/>
+                    <CustomInput label="Last Name" type={'text'} name={"lastName"} placeholder={"Last Name"}/>
+                    <CustomInput label="Contact Number" type={'text'} name={"contactNumber"} placeholder={"Contact Number"}/>
+                    <CustomInput label="Email" type={'text'} name={"email"} placeholder={"Email"}/>
+                    <CustomInput label="Message" type={'text'} name={"message"} placeholder={"Message"}/>
+                    
+                    <input type="submit"/>
+                </form>
+            </div>
         </>
     );
 }
