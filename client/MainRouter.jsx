@@ -12,7 +12,8 @@ import Contact from './src/contact';
 import Education from './src/education';
 import Project from './src/project';
 import Service from './src/service';
-import Layout from './components/Layout'
+import Layout from './components/Layout';
+import './src/index.css'
 
 const MainRouter = () => {
     return (    <div>
