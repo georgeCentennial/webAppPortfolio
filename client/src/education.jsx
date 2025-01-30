@@ -7,7 +7,10 @@
 export default function Education(){
     return (
         <>
-            <h1>Education.Qualitfication</h1>
+            
+            <div className="container">
+                <h1>Education.Qualitfication</h1>
+            </div>
         </>
     );
 }

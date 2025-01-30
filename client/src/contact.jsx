@@ -21,18 +21,22 @@ export default function Contact(){
 
     return (
         <>
-            <h1>Contact</h1>
-            <div>
-                <p>Contact me via email: gcayaby2@my.centennialcollege.ca</p>
-                <form onSubmit={handleSubmit}>
-                    <CustomInput label="First Name" type={'text'} name={"firstName"} placeholder={"First Name"}/>
-                    <CustomInput label="Last Name" type={'text'} name={"lastName"} placeholder={"Last Name"}/>
-                    <CustomInput label="Contact Number" type={'text'} name={"contactNumber"} placeholder={"Contact Number"}/>
-                    <CustomInput label="Email" type={'text'} name={"email"} placeholder={"Email"}/>
-                    <CustomInput label="Message" type={'text'} name={"message"} placeholder={"Message"}/>
-                    
-                    <input type="submit"/>
-                </form>
+            
+            <div className="container">
+                <h1>Contact</h1>
+                <div className='well well-sm'>
+                    <p>Contact me via email: gcayaby2@my.centennialcollege.ca</p>
+                </div>
+                <div>
+                    <form onSubmit={handleSubmit}>
+                        <CustomInput label="First Name" type={'text'} name={"firstName"} placeholder={"First Name"}/>
+                        <CustomInput label="Last Name" type={'text'} name={"lastName"} placeholder={"Last Name"}/>
+                        <CustomInput label="Contact Number" type={'text'} name={"contactNumber"} placeholder={"Contact Number"}/>
+                        <CustomInput label="Email" type={'text'} name={"email"} placeholder={"Email"}/>
+                        <CustomInput label="Message" type={'textarea'} name={"message"} placeholder={"Message"}/>
+                        <button type="submit" className="btn btn-default">Submit</button>
+                    </form>
+                </div>
             </div>
         </>
     );

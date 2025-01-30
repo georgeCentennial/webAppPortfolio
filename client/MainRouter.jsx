@@ -16,16 +16,18 @@ import Layout from './components/Layout';
 import './src/index.css'
 
 const MainRouter = () => {
-    return (    <div>
-                    <Layout/>
-                    <Routes>
-                        <Route exact path="/" element={<Home />} />
-                        <Route exact path="/about" element={<About />} />
-                        <Route exact path="/education" element={<Education />} />
-                        <Route exact path="/project" element={<Project />} />
-                        <Route exact path="/contact" element={<Contact />} />
-                        <Route exact path="/service" element={<Service />} />
-                    </Routes>
+    return (    <div className="container">
+                    <div>
+                        <Layout/>
+                        <Routes>
+                            <Route exact path="/" element={<Home />} />
+                            <Route exact path="/about" element={<About />} />
+                            <Route exact path="/education" element={<Education />} />
+                            <Route exact path="/project" element={<Project />} />
+                            <Route exact path="/contact" element={<Contact />} />
+                            <Route exact path="/service" element={<Service />} />
+                        </Routes>
+                    </div>
                 </div>
     );
 }
