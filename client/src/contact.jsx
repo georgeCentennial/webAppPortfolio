@@ -9,6 +9,7 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import { useNavigate } from "react-router-dom";
 import CustomInput from '../components/CustomInput';
+import { Button } from 'reactstrap';
 
 export default function Contact(){
     const [name, setName] = useState("");
