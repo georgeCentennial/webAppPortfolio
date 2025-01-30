@@ -15,7 +15,7 @@ export default function CustomInput (props){
 
     return (
         <>
-            <div className="inputWrap">
+            <div className="form-group">
                 <label>{label}</label><br/>
                 <input
                     type={props.type}
@@ -23,6 +23,7 @@ export default function CustomInput (props){
                     value={props.value}
                     onChange={onChange}
                     name={props.name}
+                    className="form-control"
                 />
             </div>
         </>

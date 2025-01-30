@@ -7,8 +7,10 @@
 export default function Home(){
     return (
         <>
-            <h1>Hello World!</h1>
-            <p>This is my portfolio for COMP299-Web application development</p>
+            <div className="container">
+                <h1>Hello World!</h1>
+                <p>This is my portfolio for COMP299-Web application development</p>
+            </div>
         </>
     );
         
